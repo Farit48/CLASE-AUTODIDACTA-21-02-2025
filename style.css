@@ -1,6 +1,7 @@
 body{
     margin: 0px;
     background-image: linear-gradient(to left,rgb(39, 175, 175),rgb(211, 211, 211),rgb(39, 175, 175));
+    
 }
 .ENCABEZADO{
     margin-top: 100px;
@@ -23,12 +24,20 @@ body{
     margin-top: 150px;
     color: white;
     text-decoration: none;
-    font-size: 30px;
-    height: 160px;
-    
-    
+    font-size: 30px   
+}
+a[href="#REGLAS"]{
+    margin-bottom: 150px;
 }
 .BLOQUES{
     border: 6px solid black;
     text-align: center;
 }
+.imagen-ejHTML{
+    width: 600px;
+}
+.imagen-ejCSS{
+    width: 600px;
+}
+
+
