@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Notable&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="ENCABEZADO">
@@ -140,26 +143,32 @@
                         <tr  >
                             <th>SELECTOR</th>
                             <th>DESCRIPCION</th>
+                            <th>EJEMPLOS</th>
                         </tr>
                         <tr >
                             <td>div, button, p</td>
                             <td>Agrupaciones. Seleccionamos varios elementos separándolos por comas.</td>
+                            <td><img src="imagenes/imagen1.png" alt="Imagen ejemplo"></td>
                         </tr>
                         <tr >
                             <td>is()</td>
                             <td>Agrupaciones. Idem al anterior, pero permite combinar con otros selectores.</td>
+                            <td><img src="imagenes/imagen2.png" alt="Imagen ejemplo"></td>
                         </tr>
                         <tr >
                             <td>:where()</td>
                             <td>Agrupaciones. Idem al anterior, pero con menor especificidad CSS.</td>
+                            <td><img src="imagenes/imagen3.png" alt="Imagen ejemplo"></td>
                         </tr>
                         <tr >
                             <td>:has()</td>
                             <td>Permite seleccionar elementos padre que tengan ciertas características en sus hijos.</td>
+                            <td><img src="imagenes/imagen4.png" alt="Imagen ejemplo"></td>
                         </tr>
                         <tr >
                             <td>:not()</td>
                             <td>Permite seleccionar elementos que no cumplan ciertas características.</td>
+                            <td><img src="imagenes/imagen5.png" alt="Imagen ejemplo"></td>
                         </tr>
                     </table>
                 </div>
@@ -171,10 +180,54 @@
         <!------------------------------------------------------------------------------------>
         <!--AQUI SE HABLA DE PSEUDOCLASES----------------------------------------------------->
         <div id="PSEUDOCLASES" class="BLOQUES">
-            <h2 >PSEUDOCLASES</h2>
-            <div class="bloque">
-                <div class="bloque_pseudoclases">
-
+            <div class="PSEUDOCLASES">
+                <h2 class="BLOQUES_SUBTITULO">PSEUDOCLASES</h2>
+                <p class="BLOQUES_GENERAL">Las pseudoclases se utilizan para hacer referencia a elementos HTML que tengan un cierto comportamiento concreto. Volvamos a recordar el esquema general de sintaxis de CSS, donde ahora añadiremos las pseudoclases, que se definen añadiendo dos puntos antes del nombre de la pseudoclase concreta, de la siguiente forma:</p>
+                <div class="TABLAS">
+                    <table  border="6" class="TABLAS_PSEUDOCLASES">
+                        <tr >
+                            <th>PSEUDOCLASE</th>
+                            <th>DESCRIPCION</th>
+                            <th>EJEMPLO</th>
+                        </tr>
+                        <tr >
+                            <td>:hover</td>
+                            <td>Selecciona el elemento si el usuario pasa el ratón sobre dicho elemento.</td>
+                            <td class="ej-hover"><h3>PASA EL RATON AQUI</h3></td>
+                        </tr>
+                        <tr >
+                            <td >:active</td>
+                            <td>Selecciona el elemento si el usuario se encuentra pulsando dicho elemento.</td>
+                            <td ><div class="ej-active" ><a href="" ><h3>MANTEN PULSADO CON EL RATON AQUI</h3></a></div></td>  
+                        </tr>
+                        <tr >
+                            <td>:focus</td>
+                            <td>Selecciona el elemento cuando tiene el foco (está en primer plano).</td>
+                            <td ><h3>AQUI EL CAMPO INPUT GANA FOCO</h3>
+                                <input class="ej-focus" type="text">
+                            </td>
+                        </tr>
+                        <tr >
+                            <td >:focus-within</td>
+                            <td>Selecciona el elemento si uno de sus miembros hijos ha ganado el foco.</td>
+                            <td>
+                                <h3>AQUI EL CAMPO LABEL GANA FOCO TAMBIEN</h3>
+                                <form class="ej-focus-within">
+                                    <label>Name: <input type="text"></label>
+                                    <label>Email: <input type="text"></label>
+                                </form>
+                            </td>
+                        </tr>
+                        <tr >
+                            <td >:focus-visible</td>
+                            <td>Selecciona el elemento cuando tiene el foco sólo de forma visible (TAB, por ejemplo).</td>
+                            <td>
+                                <h3>AQUI EL CAMPO IMPUT TIENE LA APARICION DEL BORDE PREDETERMINADO</h3>
+                                <label for="nombre">Nombre:</label>
+                                <input class="ej-focus-visible" type="text"><br><br>
+                            </td>
+                        </tr>
+                    </table>
                 </div>
             </div>
         </div>
@@ -182,12 +235,8 @@
         <!------------------------------------------------------------------------------------>
         <!--AQUI SE HABLA DE PSEUDOCLASES DE ESTRUCTURAS-------------------------------------->
         <div id="PSEUDOESTRUCTURAS" class="BLOQUES">
-            <h2 >PSEUDOCLASES DE ESTRUCTURAS</h2>
-            <div class="bloque">
-                <div class="bloque_pseudclasestructuradas">
-
-                </div>
-            </div>
+            <h2 class="BLOQUES_SUBTITULO">PSEUDOCLASES DE ESTRUCTURAS</h2>
+            <p class="BLOQUES_GENERAL"></p>
         </div>     
         <!------------------------------------------------------------------------------------>
         <!------------------------------------------------------------------------------------>

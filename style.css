@@ -3,11 +3,19 @@ body{
     background-color: bisque;
     
 }
-p, 
-h3 {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; /****FUENTE GENERAL***/
-                                                                                   /****se usa combinador logico***/
+:root {
+    --fuente-titulos:"Notable", serif;
+    --fuente-subtitulos:"Roboto", serif;
 }
+body  :is(h1,h2, .ENCABEZADO_ENLACES a ) {
+    font-family: var(--fuente-titulos);
+}
+p, 
+h3, a {
+    font-family: var(--fuente-subtitulos); /****FUENTE GENERAL***/
+    text-decoration: none;                                                                               /****se usa combinador logico***/
+}
+
 
 /***********************************************/
 /***********************************************/
@@ -34,13 +42,18 @@ h3 {
     text-decoration: none;
     font-size: 30px   
 }
+.ENCABEZADO_ENLACES a:hover{
+    color: bisque;
+    font-size: 60px;
+    
+}
 a[href="#REGLAS"]{
     margin-bottom: 150px;
 }
 /***********************************************/
 /***********************************************/
 .BLOQUES{                          /*******************************/
-    border: 6px solid black;    /**BLOQUES DE TEMAS GENERAL*****/
+    border-bottom: 6px solid black;    /**BLOQUES DE TEMAS GENERAL*****/
     text-align: center;          /********(Se aplica BEM)********/
 }
 .BLOQUES :is(.BLOQUES_SUBTITULO , .BLOQUES_GENERAL)
@@ -78,18 +91,42 @@ a[href="#REGLAS"]{
     border-radius: 3px;                         /*************************/
     border: 5px solid rgb(37, 13, 4);       /****TABLAS DIV GENERAL****/
     margin: 20px;                             /******(Se aplica BEM)****/
-    background-color: rgba(244, 229, 163, 0.959);
+    background-color: rgba(251, 240, 191, 0.959);
 }
 
-.TABLAS :is(.TABLAS_COMBINADORES, .TABLAS_COMBINADORESlog){     /*************************************************/
-    width: 1206px;                                             /***TABLAS TAMAÑO*********************************/
+.TABLAS :is(.TABLAS_COMBINADORES, .TABLAS_COMBINADORESlog, .TABLAS_PSEUDOCLASES){     /*************************************************/
+    width: 1214px;                                             /***TABLAS TAMAÑO*********************************/
     height: 300px;                                            /***(Se aplica BEM) (Combinadores logicos)********/
-   
 }
-.TABLAS_COMBINADORES .TABLAS_COMBINADORESlog  :not(.TABLAS ) {  /********************************************/
-    text-decoration: none;                                      /*******EXCEPCION TABLAS COMBINADORES********/
-    color: black;                                             /***********(Combinadores logicos)***********/
+.TABLAS_COMBINADORES :not(.TABLAS ) {     /********************************************/
+                                         /*******EXCEPCION TABLAS COMBINADORES Y PSEUDOCLASES********/
+    color: black;                     /***********(Combinadores logicos)***********/
 }
+.TABLAS_PSEUDOCLASES :not(.TABLAS){  
+    color: black;
+}
+.TABLAS_COMBINADORESlog img {           
+    width: 500px;                   
+    margin: 3px;
+}
+
+.ej-hover:hover {
+    background-color: aquamarine;
+}
+.ej-active:active {
+    background-color: red;  
+}
+.ej-focus:focus {
+    border: 5px dotted #dc0000;
+} 
+.ej-focus-within:focus-within{
+    background: yellow;
+}
+.ej-focus-visible {
+    border: 2px solid blue;
+    outline: none;
+}
+
 
 
 
