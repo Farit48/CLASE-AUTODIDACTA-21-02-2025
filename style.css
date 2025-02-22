@@ -1,24 +1,32 @@
 body{
     margin: 0px;
-    background-image: linear-gradient(to left,rgb(39, 175, 175),rgb(211, 211, 211),rgb(39, 175, 175));
+    background-color: bisque;
     
 }
+p, 
+h3 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; /****FUENTE GENERAL***/
+                                                                                   /****se usa combinador logico***/
+}
+
+/***********************************************/
+/***********************************************/
+/************ENCABEZADO Y ENLACES---************/
+/***********************************************/
 .ENCABEZADO{
     margin-top: 100px;
     text-align: center;
-    background-image: linear-gradient(to left,rgb(39, 175, 175),rgb(211, 211, 211),rgb(39, 175, 175));
+    background-color: bisque;
     
 }
 .ENCABEZADO_OPCIONS{
     margin-top: 120px;
     margin-bottom: 200px;
 }
-.ENCABEZADO_ENLACES{
-    
+.ENCABEZADO_ENLACES{ 
     display: flex;
     flex-direction: column;
-    background-image: linear-gradient(to left,rgb(27, 27, 27),rgb(211, 211, 211),rgb(27, 27, 27));
-    
+    background-color: rgb(0, 0, 0);  
 }
 .ENCABEZADO_ENLACES a {
     margin-top: 150px;
@@ -29,15 +37,59 @@ body{
 a[href="#REGLAS"]{
     margin-bottom: 150px;
 }
-.BLOQUES{
-    border: 6px solid black;
-    text-align: center;
+/***********************************************/
+/***********************************************/
+.BLOQUES{                          /*******************************/
+    border: 6px solid black;    /**BLOQUES DE TEMAS GENERAL*****/
+    text-align: center;          /********(Se aplica BEM)********/
 }
-.imagen-ejHTML{
-    width: 600px;
+.BLOQUES :is(.BLOQUES_SUBTITULO , .BLOQUES_GENERAL)
+ {           /********************************/
+    text-align: start;        /*******SUBTITULOS Y GENERAL********************************/
+    margin-left: 100px;       /*******(Se aplica BEM) y (Combinadores logicos)**********/
+    margin-bottom: 50px;
+    margin-top: 60px;
 }
-.imagen-ejCSS{
-    width: 600px;
+
+.BLOQUES_EJEMPLOS > div {       /******************************************/
+    border: 2px solid rgb(59, 30, 7); /*****BLOQUES EJEMPLO Y CONTENEDORES*******/
+    border-radius: 6px;       /********(Se aplica combinadores)**********/
+    width: 1100px;
+    margin: 10px;
+    margin-left: 60px;
+    
 }
+.BLOQUES_EJEMPLOS  p {     /**********************************/
+    text-align: left;     /****BLOQUES DE EJEMPLO Y TEXT*****/
+    margin-left: 20px;  /****(Se aplica combinadores)******/  
+    margin-bottom: 30px; 
+       
+}
+/***********************************************/
+/***********************************************/
+.imagenEj{
+    width: 500px;      /***************************/
+}                     /*****IMAGENES TAMAÑO*******/
+                     /******(Se aplica BEM)******/
+
+/***********************************************/
+/***********************************************/
+.TABLAS {
+    border-radius: 3px;                         /*************************/
+    border: 5px solid rgb(37, 13, 4);       /****TABLAS DIV GENERAL****/
+    margin: 20px;                             /******(Se aplica BEM)****/
+    background-color: rgba(244, 229, 163, 0.959);
+}
+
+.TABLAS :is(.TABLAS_COMBINADORES, .TABLAS_COMBINADORESlog){     /*************************************************/
+    width: 1206px;                                             /***TABLAS TAMAÑO*********************************/
+    height: 300px;                                            /***(Se aplica BEM) (Combinadores logicos)********/
+   
+}
+.TABLAS_COMBINADORES .TABLAS_COMBINADORESlog  :not(.TABLAS ) {  /********************************************/
+    text-decoration: none;                                      /*******EXCEPCION TABLAS COMBINADORES********/
+    color: black;                                             /***********(Combinadores logicos)***********/
+}
+
 
 
