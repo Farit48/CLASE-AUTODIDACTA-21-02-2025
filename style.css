@@ -15,7 +15,9 @@ h3, a {
     font-family: var(--fuente-subtitulos); /****FUENTE GENERAL***/
     text-decoration: none;                                                                               /****se usa combinador logico***/
 }
-
+:any-link{
+    color: black;
+}
 
 /***********************************************/
 /***********************************************/
@@ -50,12 +52,17 @@ h3, a {
 a[href="#REGLAS"]{
     margin-bottom: 150px;
 }
+a[href="#enca"] {
+    color: #ffffffd7;
+    background-color: black;
+}
 /***********************************************/
 /***********************************************/
 .BLOQUES{                          /*******************************/
     border-bottom: 6px solid black;    /**BLOQUES DE TEMAS GENERAL*****/
-    text-align: center;          /********(Se aplica BEM)********/
+                                        /********(Se aplica BEM)********/
 }
+
 .BLOQUES :is(.BLOQUES_SUBTITULO , .BLOQUES_GENERAL)
  {           /********************************/
     text-align: start;        /*******SUBTITULOS Y GENERAL********************************/
@@ -67,10 +74,11 @@ a[href="#REGLAS"]{
 .BLOQUES_EJEMPLOS > div {       /******************************************/
     border: 2px solid rgb(59, 30, 7); /*****BLOQUES EJEMPLO Y CONTENEDORES*******/
     border-radius: 6px;       /********(Se aplica combinadores)**********/
-    width: 1100px;
     margin: 10px;
-    margin-left: 60px;
-    
+    text-align: center;  
+}
+.BLOQUES_EJEMPLOS  :hover{
+    background-color: rgb(255, 195, 122);
 }
 .BLOQUES_EJEMPLOS  p {     /**********************************/
     text-align: left;     /****BLOQUES DE EJEMPLO Y TEXT*****/
@@ -95,7 +103,7 @@ a[href="#REGLAS"]{
 }
 
 .TABLAS :is(.TABLAS_COMBINADORES, .TABLAS_COMBINADORESlog, .TABLAS_PSEUDOCLASES){     /*************************************************/
-    width: 1214px;                                             /***TABLAS TAMAÑO*********************************/
+    width: 100%;                                             /***TABLAS TAMAÑO*********************************/
     height: 300px;                                            /***(Se aplica BEM) (Combinadores logicos)********/
 }
 .TABLAS_COMBINADORES :not(.TABLAS ) {     /********************************************/
@@ -106,7 +114,7 @@ a[href="#REGLAS"]{
     color: black;
 }
 .TABLAS_COMBINADORESlog img {           
-    width: 500px;                   
+    width: 100%;                   
     margin: 3px;
 }
 
