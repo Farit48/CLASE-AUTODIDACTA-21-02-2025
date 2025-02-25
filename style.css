@@ -96,13 +96,14 @@ a[href="#enca"] {
 /***********************************************/
 /***********************************************/
 .TABLAS {
+    text-align: center;
     border-radius: 3px;                         /*************************/
     border: 5px solid rgb(37, 13, 4);       /****TABLAS DIV GENERAL****/
     margin: 20px;                             /******(Se aplica BEM)****/
     background-color: rgba(251, 240, 191, 0.959);
 }
 
-.TABLAS :is(.TABLAS_COMBINADORES, .TABLAS_COMBINADORESlog, .TABLAS_PSEUDOCLASES){     /*************************************************/
+.TABLAS :is(.TABLAS_COMBINADORES, .TABLAS_COMBINADORESlog, .TABLAS_PSEUDOCLASES, .TABLAS_REGLAS){     /*************************************************/
     width: 100%;                                             /***TABLAS TAMAÑO*********************************/
     height: 300px;                                            /***(Se aplica BEM) (Combinadores logicos)********/
 }
